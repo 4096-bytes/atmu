@@ -475,10 +475,34 @@ Only add complexity with:
 
 ## Tool Selection Guide
 
+### MCP Tool Priority (Required)
+
+**MUST rules**
+
+- When the task depends on third-party library/framework/platform details (official docs, API, parameters, configuration, examples, version differences, migrations, breaking changes):
+  - MUST use Context7: call `mcp__context7__resolve-library-id` first, then `mcp__context7__get-library-docs` (switch `topic` or increment `page` as needed)
+  - Do not rely on memory for API correctness (unless explicitly stated as an assumption)
+- When the task involves repository code (locating implementations, understanding call chains/impact radius, reading before changes, refactors, test-scope analysis):
+  - MUST use Serena: `mcp__serena__activate_project` → `mcp__serena__check_onboarding_performed`
+  - Prefer symbol/reference workflows: `mcp__serena__get_symbols_overview` / `mcp__serena__find_symbol` / `mcp__serena__find_referencing_symbols`
+  - Prefer `mcp__serena__search_for_pattern` for text search; only fall back to `rg` when Serena is insufficient
+
+**Trigger keywords (if present, use immediately)**
+
+- Context7: documentation, docs, API, parameters, configuration, examples, official, version, upgrade, migration, breaking change(s)
+- Serena: where is it defined, which file, who calls it, references, impact radius, refactor, change code, add tests
+
+**Minimal playbooks**
+
+- Docs lookup: `resolve-library-id` → `get-library-docs(topic=...)` → switch `topic` or `page + 1` if needed
+- Code reading: overview/find → references → `mcp__serena__think_about_collected_information` → then start modifications
+
 | Task                  | Tool | Why                      |
 | --------------------- | ---- | ------------------------ |
+| Read/understand code  | Serena MCP | Symbol-aware, repo-grounded |
+| Check library docs    | Context7 MCP | Verifiable API reference |
 | Find files by pattern | Glob | Fast pattern matching    |
-| Search code content   | Grep | Optimized regex search   |
+| Search code content   | `rg` | Optimized regex search   |
 | Read specific files   | Read | Direct file access       |
 | Explore unknown scope | Task | Multi-step investigation |
 
