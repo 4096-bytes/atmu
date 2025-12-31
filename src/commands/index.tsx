@@ -1,18 +1,28 @@
-import {Text} from 'ink';
-import zod from 'zod';
+import {useApp} from 'ink';
+import type {MenuId} from '../types/menu.js';
+import {IndexScreen} from '../ui/screens/index-screen.js';
+import {getMainMenuItems} from '../utils/menu.js';
+import {getPackageMeta} from '../utils/package-meta.js';
 
-export const options = zod.object({
-	name: zod.string().default('Stranger').describe('Name'),
-});
+export default function Index() {
+	const app = useApp();
+	const {version} = getPackageMeta();
+	const menuItems = getMainMenuItems();
 
-type Properties = {
-	readonly options: zod.infer<typeof options>;
-};
+	const handleSelectMenu = (id: MenuId) => {
+		switch (id) {
+			case 'exit': {
+				app.exit();
+				break;
+			}
+		}
+	};
 
-export default function Index({options}: Properties) {
 	return (
-		<Text>
-			Hello, <Text color="green">{options.name}</Text>
-		</Text>
+		<IndexScreen
+			version={version}
+			menuItems={menuItems}
+			onSelectMenu={handleSelectMenu}
+		/>
 	);
 }

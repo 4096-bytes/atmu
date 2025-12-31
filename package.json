@@ -1,8 +1,9 @@
 {
 	"name": "atmu",
 	"version": "0.0.1",
+	"description": "atmu is an interactive environment concierge for Codex CLI. Run `atmu` (no flags) to open the UI.",
 	"license": "MIT",
-	"bin": "dist/cli.js",
+	"bin": "dist/atmu.js",
 	"type": "module",
 	"engines": {
 		"node": ">=20"
@@ -16,6 +17,7 @@
 		"dist"
 	],
 	"dependencies": {
+		"@inkjs/ui": "^2.0.0",
 		"ink": "^6.3.1",
 		"pastel": "^4.0.0",
 		"react": "^19.2.0",
@@ -44,5 +46,10 @@
 			"react/react-in-jsx-scope": "off"
 		}
 	},
-	"prettier": "@vdemedes/prettier-config"
+	"prettier": "@vdemedes/prettier-config",
+	"ava": {
+		"files": [
+			"test/**/*.test.js"
+		]
+	}
 }
