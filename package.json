@@ -1,0 +1,48 @@
+{
+	"name": "atmu",
+	"version": "0.0.1",
+	"license": "MIT",
+	"bin": "dist/cli.js",
+	"type": "module",
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"test": "prettier --check . && xo && npm run build && ava"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"ink": "^6.3.1",
+		"pastel": "^4.0.0",
+		"react": "^19.2.0",
+		"zod": "^4.1.12"
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^8.0.1",
+		"@types/react": "^19.2.2",
+		"@vdemedes/prettier-config": "^2.0.1",
+		"ava": "^6.4.1",
+		"chalk": "^5.2.0",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"ink-testing-library": "^4.0.0",
+		"prettier": "^3.6.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.3",
+		"xo": "^0.58.0"
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"react/prop-types": "off",
+			"react/react-in-jsx-scope": "off"
+		}
+	},
+	"prettier": "@vdemedes/prettier-config"
+}
