@@ -1,6 +1,6 @@
 # Spec Delta: atmu
 
-## MODIFIED Requirements
+## ADDED Requirements
 
 ### Requirement: 主菜单项由扩展注册表驱动
 
