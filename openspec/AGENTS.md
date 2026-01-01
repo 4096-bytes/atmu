@@ -497,14 +497,14 @@ Only add complexity with:
 - Docs lookup: `resolve-library-id` → `get-library-docs(topic=...)` → switch `topic` or `page + 1` if needed
 - Code reading: overview/find → references → `mcp__serena__think_about_collected_information` → then start modifications
 
-| Task                  | Tool | Why                      |
-| --------------------- | ---- | ------------------------ |
-| Read/understand code  | Serena MCP | Symbol-aware, repo-grounded |
-| Check library docs    | Context7 MCP | Verifiable API reference |
-| Find files by pattern | Glob | Fast pattern matching    |
-| Search code content   | `rg` | Optimized regex search   |
-| Read specific files   | Read | Direct file access       |
-| Explore unknown scope | Task | Multi-step investigation |
+| Task                  | Tool         | Why                         |
+| --------------------- | ------------ | --------------------------- |
+| Read/understand code  | Serena MCP   | Symbol-aware, repo-grounded |
+| Check library docs    | Context7 MCP | Verifiable API reference    |
+| Find files by pattern | Glob         | Fast pattern matching       |
+| Search code content   | `rg`         | Optimized regex search      |
+| Read specific files   | Read         | Direct file access          |
+| Explore unknown scope | Task         | Multi-step investigation    |
 
 ## Error Recovery
 

@@ -1,4 +1,4 @@
-export type MenuId = 'exit';
+export type MenuId = string;
 
 export type MenuItem = {
 	readonly id: MenuId;

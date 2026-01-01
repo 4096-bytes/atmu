@@ -23,4 +23,4 @@
 
 ## Out of Scope（本 Change）
 
-- 不实现 API 配置表单与 `~/.codex/auth.json` 写入（见 `add-api-config-files`）。
+- 不实现 API 配置表单与 `~/.codex/auth.json` 写入（见 `add-custom-provider-api-config`）。

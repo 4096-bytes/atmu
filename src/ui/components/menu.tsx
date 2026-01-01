@@ -16,7 +16,7 @@ export function Menu({isDisabled = false, items, onSelect}: Properties) {
 			visibleOptionCount={options.length}
 			options={options}
 			onChange={value => {
-				onSelect(value as MenuId);
+				onSelect(value);
 			}}
 		/>
 	);

@@ -1,12 +1,12 @@
-# Change: 添加 API 配置页并写入 ~/.codex 配置文件
+# Change: 添加自定义 provider API 配置（用于 Codex CLI）
 
 ## Why
 
-将 API 配置从 `atmu` 内部存储迁移为直接编辑 Codex CLI 期望的 `~/.codex/config.toml` 与 `~/.codex/auth.json`，减少重复状态来源，并保证底层 CLI 的一致性与可移植性。
+允许用户配置自定义 provider 的 API（provider/base URL/API key），并将其写入 Codex CLI 期望的 `~/.codex/config.toml` 与 `~/.codex/auth.json`，从而设置 Codex CLI 的 provider 接入模式；同时避免 `atmu` 内部另存一份配置导致状态漂移。
 
 ## What Changes
 
-- 在主界面操作菜单提供 `Configure API (Advanced)` 入口，进入表单视图：
+- 在主界面操作菜单提供 `configure API provider` 入口，进入表单视图：
   - Provider（必填）
   - Base URL（必填，不提供默认值）
   - API Key（必填，掩码显示）

@@ -62,7 +62,7 @@ src/
     index.tsx            # 默认命令入口：装配 UI（Index 视图）并注入依赖/handlers
   ui/
     screens/
-      index-screen.tsx   # 主界面：Banner + Menu（纯渲染 + 事件回调）
+      index.tsx          # 主界面：Banner + Menu（纯渲染 + 事件回调）
     components/
       banner.tsx         # Banner 展示（ATMU + 版本 + 可选状态文案）
       menu.tsx           # 操作菜单（@inkjs/ui Select 的薄封装）

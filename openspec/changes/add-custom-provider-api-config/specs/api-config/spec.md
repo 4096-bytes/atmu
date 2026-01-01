@@ -19,7 +19,7 @@
 
 ### Requirement: API 配置表单（掩码输入）
 
-主界面操作菜单中选择 `Configure API (Advanced)` 后，`atmu` SHALL 进入配置表单视图，允许用户：
+主界面操作菜单中选择 `configure API provider` 后，`atmu` SHALL 进入配置表单视图，允许用户：
 
 - 输入 Provider（必填）
 - 输入 API Key（掩码显示）
@@ -30,7 +30,7 @@ UI SHALL 不以明文展示已保存的 API Key。
 #### Scenario: 进入配置页并编辑
 
 **GIVEN** 用户位于主界面
-**WHEN** 用户选择 `Configure API (Advanced)`
+**WHEN** 用户选择 `configure API provider`
 **THEN** `atmu` 进入配置表单视图
 **AND THEN** API Key 输入框以掩码方式显示用户输入
 
