@@ -325,3 +325,15 @@ export async function writeCodexApiConfigFiles(
 	const nextAuthJson = `${JSON.stringify(authObject, null, 2)}\n`;
 	await fs.writeFile(paths.authJsonPath, nextAuthJson, 'utf8');
 }
+
+export async function ensureCodexConfigTomlExists({
+	homeDirectory = os.homedir(),
+}: {readonly homeDirectory?: string} = {}): Promise<void> {
+	const paths = getPaths(homeDirectory);
+	await fs.mkdir(paths.codexDirectory, {recursive: true});
+
+	const existingConfigToml = await readFileIfExists(paths.configTomlPath);
+	if (existingConfigToml === undefined) {
+		await fs.writeFile(paths.configTomlPath, '', 'utf8');
+	}
+}

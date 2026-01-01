@@ -1,8 +1,11 @@
 # atmu Specification
 
 ## Purpose
+
 TBD - created by archiving change add-atmu-ui-shell. Update Purpose after archive.
+
 ## Requirements
+
 ### Requirement: 单命令交互式 TUI
 
 `atmu` SHALL 只响应 `atmu` 命令本身，并以 Ink（React for CLI）提供交互式 TUI 体验。
@@ -88,4 +91,3 @@ TBD - created by archiving change add-atmu-ui-shell. Update Purpose after archiv
 **WHEN** 用户在终端运行 `atmu`
 **THEN** 主界面菜单中出现 `configure API provider - use a custom provider for Codex CLI`
 **AND THEN** 主界面菜单中出现 `exit - quit atmu`
-

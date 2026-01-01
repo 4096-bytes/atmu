@@ -1,6 +1,6 @@
 # Terminal UI Design Standard
 
-This document defines the project’s baseline terminal UI (TUI) design standard. It focuses on *portable UI principles* and intentionally avoids tying the design to a specific library, framework, or the current state of the codebase.
+This document defines the project’s baseline terminal UI (TUI) design standard. It focuses on _portable UI principles_ and intentionally avoids tying the design to a specific library, framework, or the current state of the codebase.
 
 ## 1) Goals
 
@@ -106,4 +106,3 @@ Design screens using these zones from top to bottom. Not every screen must inclu
 - **Noise**: Is emphasis reserved for actionable/critical elements?
 - **Constraints**: Does it remain usable on small terminals?
 - **States**: Are loading/error/success states explicit and unambiguous?
-

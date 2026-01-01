@@ -50,6 +50,7 @@
 	"ava": {
 		"files": [
 			"test/**/*.test.js"
-		]
+		],
+		"serial": true
 	}
 }

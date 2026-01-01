@@ -1,8 +1,11 @@
 # api-config Specification
 
 ## Purpose
+
 TBD - created by archiving change add-custom-provider-api-config. Update Purpose after archive.
+
 ## Requirements
+
 ### Requirement: UI 文案与反馈（英文、无 emoji、动效、徽标）
 
 在 API 配置流程（入口标签、表单字段、校验提示、保存/失败提示）中，`atmu` SHALL 满足：
@@ -91,4 +94,3 @@ requires_openai_auth = true
 **WHEN** `atmu` 完成保存流程
 **THEN** UI 显示重启终端提示
 **AND THEN** 用户确认后返回主界面
-
